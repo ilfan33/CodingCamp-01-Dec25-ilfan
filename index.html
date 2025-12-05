@@ -5,37 +5,430 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Ilfan Taufik</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
+  <body class="bg-gray-300" style="scroll-behavior: smooth;"></body>
     <!-- header -->
-    <header>
-      <!-- logo -->
-      <div class="logo"></div>
-      <!-- navigation bar -->
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Our Profile</a></li>
-          <li><a href="#about">Portfolio</a></li>
-          <li><a href="#contact">Massage Us</a></li>
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 to-slate-800 shadow-lg">
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        <!-- logo -->
+        <div class="logo flex items-center gap-3">
+          <a href="#home">
+            <img
+              src="ilfan web.jpg"
+              width="50px"
+              alt="logo"
+              class="rounded-full hover:scale-110 transition" />
+          </a>
+          <a
+            href="#home"
+            class="text-white font-bold text-lg hover:text-amber-400 transition">
+            Ilfan Taufik
+          </a>
+        </div>
+        <!-- navigation bar -->
+        <nav class="hidden md:block">
+          <ul class="flex gap-4 md:gap-8">
+            <li>
+              <a
+                href="#home"
+                class="text-white hover:text-amber-400 transition font-medium text-sm md:text-base"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#profile"
+                class="text-white hover:text-amber-400 transition font-medium text-sm md:text-base"
+                >Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="#portofolio"
+                class="text-white hover:text-amber-400 transition font-medium text-sm md:text-base"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-white hover:text-amber-400 transition font-medium text-sm md:text-base"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- hamburger button -->
+        <button
+          id="hamburger"
+          class="md:hidden text-white text-2xl cursor-pointer hover:text-amber-400 transition">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- mobile menu -->
+      <nav id="mobile-menu" class="hidden md:hidden bg-slate-800">
+        <ul class="flex flex-col gap-2 px-4 py-4">
+          <li>
+            <a
+              href="#home"
+              class="text-white hover:text-amber-400 transition font-medium block py-2"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#profile"
+              class="text-white hover:text-amber-400 transition font-medium block py-2"
+              >Our Profile</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="text-white hover:text-amber-400 transition font-medium block py-2"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="text-white hover:text-amber-400 transition font-medium block py-2"
+              >Massage Us</a
+            >
+          </li>
         </ul>
+      </nav>
     </header>
+
     <!-- main content -->
-    <main>
-      <section class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Discover my projects and skills.</p>
-      </section>
-      <section class="projects">
-        <h2>My Projects</h2>
-        <div class="project-list">
-          <!-- Project items will go here -->
+    <main id="home" class="pt-15 pb-8">
+      <!-- image carousel section -->
+      <section class="max-w-6xl mx-auto px-4 py-12">
+        <div class="relative bg-slate-800 rounded-lg overflow-hidden shadow-xl">
+          <!-- carousel container -->
+          <div class="relative h-96 md:h-[500px]">
+            <!-- images wrapper -->
+            <div id="carousel-wrapper" class="relative w-full h-full">
+              <!-- slide 1 -->
+              <div
+                class="carousel-slide absolute w-full h-full transition-all duration-500 ease-in-out opacity-100">
+                <img
+                  src="logo.png"
+                  alt="Project 1"
+                  class="w-full h-full object-cover" />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-content-start p-6">
+                  <h3 class="text-white text-2xl font-bold mb-2">
+                    Hallo, saya Ilfan Taufik 👋
+                  </h3>
+                  <p class="text-gray-200 text-sm md:text-base">
+                    Ini adalah mini project saya pada CodingCamp RevoU pada 1
+                    Desember 2025.
+                  </p>
+                </div>
+              </div>
+              <!-- slide 2 -->
+              <div
+                class="carousel-slide absolute w-full h-full transition-all duration-500 ease-in-out opacity-0 translate-x-full">
+                <img
+                  src="webportfoliocss-js.png"
+                  alt="Project 2"
+                  class="w-full h-full object-cover" />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                  <h3 class="text-white text-2xl font-bold mb-2">
+                    Web Portfolio CSS & JS
+                  </h3>
+                  <p class="text-gray-200 text-sm md:text-base">
+                    web portfolio sederhana menggunakan CSS dan JavaScript untuk
+                    menampilkan proyek-proyek saya dengan desain yang menarik
+                    dan interaktif.
+                  </p>
+                </div>
+              </div>
+              <!-- slide 3 -->
+              <div
+                class="carousel-slide absolute w-full h-full transition-all duration-500 ease-in-out opacity-0 translate-x-full">
+                <img
+                  src="webtailwinds.png"
+                  alt="Project 3"
+                  class="w-full h-full object-cover" />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                  <h3 class="text-white text-2xl font-bold mb-2">
+                    Web Portfolio Tailwind CSS
+                  </h3>
+                  <p class="text-gray-200 text-sm md:text-base">
+                    Web portfolio yang dibangun dengan Tailwind CSS, menampilkan
+                    proyek-proyek saya dengan desain responsif dan modern.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- prev button -->
+          <button
+            id="prev-btn"
+            class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-amber-400 hover:bg-amber-500 text-black rounded-full p-3 transition">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+
+          <!-- next button -->
+          <button
+            id="next-btn"
+            class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-amber-400 hover:bg-amber-500 text-black rounded-full p-3 transition">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+
+          <!-- dots indicator -->
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            <button
+              class="carousel-dot w-3 h-3 rounded-full bg-amber-400 cursor-pointer transition"
+              data-index="0"></button>
+            <button
+              class="carousel-dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer transition"
+              data-index="1"></button>
+            <button
+              class="carousel-dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer transition"
+              data-index="2"></button>
+          </div>
         </div>
       </section>
+      <div id="profile" class="pb-16"></div>
     </main>
+
+    <!-- our profile section -->
+    <section class="max-w-6xl mx-auto px-4 py-1">
+      <h2>
+        <h2 class="text-3xl font-bold text-slate-900 mb-14 text-center">
+          Profile
+      </h2>
+      <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow-lg overflow-hidden">
+        <img
+          src="ilfan web.jpg"
+          alt="Ilfan Taufik"
+          class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-full m-6 md:m-8 border-4 border-amber-400"
+        />
+        <div class="flex-1 p-6 md:p-8">
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Ilfan Taufik</h2>
+          <p class="text-gray-700 text-base md:text-lg">
+            Saya adalah seorang pengembang web yang antusias belajar teknologi baru dan membangun solusi kreatif. Saat ini saya mengikuti CodingCamp RevoU untuk meningkatkan skill dan pengalaman di bidang web development. Saya percaya bahwa kerja keras dan semangat belajar akan membawa saya menuju kesuksesan.
+          </p>
+        </div>
+      </div>
+      <div id="portofolio"></div>
+    </section>
+
+    <!-- portofolio section -->
+    <section class="max-w-6xl mx-auto px-4 py-20">
+      <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">
+        Portfolio
+      </h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- portofolio item 1 -->
+        <div
+          class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+          <img
+            src="webportfoliocss-js.png"
+            alt="Web Portfolio CSS & JS"
+            class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">
+              Web Portfolio CSS & JS
+            </h3>
+            <p class="text-gray-700 text-base">
+              Web portfolio sederhana menggunakan CSS dan JavaScript untuk
+              menampilkan proyek-proyek saya dengan desain yang menarik dan
+              interaktif.
+            </p>
+          </div>
+        </div>
+        <!-- portofolio item 2 -->
+        <div
+          class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+          <img
+            src="webtailwinds.png"
+            alt="Web Portfolio Tailwind CSS"
+            class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">
+              Web Portfolio Tailwind CSS
+            </h3>
+            <p class="text-gray-700 text-base">
+              Web portfolio yang dibangun dengan Tailwind CSS, menampilkan
+              proyek-proyek saya dengan desain responsif dan modern.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="contact"></div>
+    </section>
+
+    <!-- contact section -->
+    <section
+      class="max-w-6xl mx-auto px-4 py-12 bg-white rounded-lg shadow-lg">
+      <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">
+        Contact Me
+      </h2>
+      <form class="max-w-2xl mx-auto space-y-6">
+        <div>
+          <label
+            for="name"
+            class="block text-sm font-medium text-gray-700 mb-1"
+            >Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
+            placeholder="Your Name" />
+        </div>
+        <div>
+          <label
+            for="email"
+            class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input
+            type="email" id="email" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
+            placeholder="Your Email" />
+        </div>
+        <div>
+          <label
+            for="message"
+            class="block text-sm font-medium text-gray-700 mb-1"
+            >Message</label
+          >
+          <textarea
+            id="message"
+            rows="4"
+            class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
+            placeholder="Your Message"></textarea>
+        </div>
+        <div class="text-center">
+          <button
+            type="submit"
+            class="bg-amber-400 hover:bg-amber-500 text-white font-semibold py-2 px-6 rounded-md transition"
+            >
+            Send Message
+          </button>
+        </div>
+      </form>
+
+
+
     <!-- footer -->
-    <footer>
-      <p>&copy; 2024 Ilfan Taufik. All rights reserved.</p>
+    <footer class="bg-slate-900 text-gray-200 py-8 mt-12">
+      <div
+        class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-around gap-8">
+        <!-- Profile Info -->
+        <div>
+          <h4 class=" text-2xl font-bold mb-1">Ilfan Taufik</h4>
+          <p class="text-sm mb-2">
+            Terima kasih telah mengunjungi portfolio saya.
+          </p>
+        </div>
+        <!-- Quick Navigation -->
+        <div>
+          <h5 class="font-semibold text-2xl mb-2">Navigasi Cepat</h5>
+          <ul class="space-y-1">
+            <li>
+              <a href="#home" class="hover:text-amber-400 transition text-sm"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#profile"
+                class="hover:text-amber-400 transition text-sm"
+                >Our Profile</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="hover:text-amber-400 transition text-sm"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-amber-400 transition text-sm"
+                >Massage Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Social Media -->
+        <div>
+          <h5 class="text-2xl font-semibold mb-2">Sosial Media</h5>
+          <div class="flex gap-3">
+            <a
+              href="https://instagram.com/ilfan_33"
+              target="_blank"
+              aria-label="Instagram"
+              class="hover:text-amber-400 transition">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+              </svg>
+            </a>
+            <a
+              href="https://linkedin.com/in/ilfan-taufik"
+              target="_blank"
+              aria-label="LinkedIn"
+              class="hover:text-amber-400 transition">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.29h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.88v1.23h.04c.4-.75 1.38-1.54 2.85-1.54 3.05 0 3.61 2.01 3.61 4.62v4.69z" />
+              </svg>
+            </a>
+            <a
+              href="ilfantaufik24@gmail.com@example.com"
+              aria-label="Email"
+              class="hover:text-amber-400 transition">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm-16 12V8.99l7.88 6.99c.36.32.88.32 1.24 0L20 8.99V18H4z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto px-4 mt-12 text-xs text-gray-400">
+        &copy; 2025 CodingCamp-Dec25 Ilfan Taufik. All rights reserved.
+      </div>
     </footer>
 
     <!-- javascript -->
